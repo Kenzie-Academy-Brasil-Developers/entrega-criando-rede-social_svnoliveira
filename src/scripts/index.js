@@ -83,7 +83,7 @@ function renderPosts(){
         heart.alt = 'heart';
         heart.classList.add('button--heart')
         counter.classList.add('published__like-counter');
-        counter.innerText ='0';
+        counter.innerText =`${userInfo.likes}`;
 
         publishedContainer.appendChild(card);
         card.appendChild(header);
