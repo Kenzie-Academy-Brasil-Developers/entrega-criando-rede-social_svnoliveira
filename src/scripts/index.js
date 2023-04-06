@@ -1,5 +1,11 @@
 import { users, posts, suggestUsers } from "./database.js"
 
+//form adjust
+
+document.getElementById("post__container").addEventListener("click", function(event){
+    event.preventDefault()
+  });
+
 //render fuctions
 
 function renderMainUser (){
@@ -173,12 +179,14 @@ function handleModal () {
         const userPicture = document.querySelector('.modal__container > header > .user__profile--small > img');
         const userName = document.querySelector('.modal__container > header > .user__profile--small > .user__name-container > h2');
         const userStack = document.querySelector('.modal__container > header > .user__profile--small > .user__name-container > span');
+        const postTitle = document.querySelector('.modal__container > h2');
         const description = document.querySelector('.modal__container > p');
 
         button.addEventListener('click', () => {
             userPicture.src = `${userInfo.img}`;
             userName.innerText = `${userInfo.user}`;
             userStack.innerText = `${userInfo.stack}`;
+            postTitle.innerText = `${userInfo.title}`;
             description.innerText = `${userInfo.text}`;
             controller.showModal();
         })

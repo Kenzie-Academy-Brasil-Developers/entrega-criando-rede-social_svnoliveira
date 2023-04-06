@@ -101,7 +101,7 @@ body > header > button {
     margin-bottom: 11%;
 }
 
-.published__post-card > h1 {
+.published__post-card > h1{
     font: var(--tittle-large);
     margin: 1.3rem 0;
 }
@@ -144,7 +144,6 @@ body > header > button {
 .modal__container > header{
     display: flex;
     flex-direction: row;
-    padding: 5%;
     justify-content: space-between;
     align-items: center;
 }
@@ -157,11 +156,14 @@ body > header > button {
     right: 0;
 }
 
-.modal__container > p, .modal__container > article {
-    padding: 5%;
+.modal__container > p{
     font: var(--text-medium);
 }
 
+.modal__container > h2{
+    font: var(--tittle-large);
+    margin: 1rem 0;
+}
 /* ------------------------------  media queries ------------------------------*/
 
 @media (min-width: 760px){
@@ -198,5 +200,13 @@ body > header > button {
     .modal__controller{
         max-width: 44rem;
         bottom: 50vh;
+        min-height: 35vh;
+    }
+    .modal__container{
+        padding: 0 5%;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 }
