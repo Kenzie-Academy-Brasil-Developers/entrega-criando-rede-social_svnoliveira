@@ -1,0 +1,53 @@
+:root {
+    /* Colors  */
+    --primary-color: #4263EB;
+    --secondary-color: #364FC7;
+
+    --heart-color: #D7443E;
+
+    --black: #0A0C0D;
+    --grey-darkest: #212529;
+    --grey-dark: #495057;
+    --grey-basic: #868E96;
+    --grey-light: #DEE2E6;
+    --grey-lightest: #F8F9FA;
+    --white: #FFFFFF;
+
+    --opacity-default: rgba(33,37,41, 0.5);
+
+    /* fonts */
+    --tittle-large: normal normal 700 1.75rem/2.5rem 'Inter';
+    --tittle-normal: normal normal 600 1.25rem/1.5rem 'Inter';
+    --text-large: normal normal 400 1rem/1.75rem 'Inter';
+    --text-medium: normal normal 400 0.875rem/1rem 'Inter';
+    --text-small: normal normal 400 0.75rem/1rem 'Inter';
+
+    /* sizes */
+
+    --button-radius: 0.15rem;
+}
+
+/* inputs */
+
+input, textarea {
+    border: 2px solid var(--grey-light);
+    border-radius: 0.25rem;
+    padding: 1rem 1.25rem;
+    font: var(--text-large);
+    color: var(--grey-basic);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--grey-basic);
+    font: var(--text-large);
+}
+
+input:valid, textarea:valid {
+    color: var(--grey-darkest);
+    border-color: var(--grey-light);
+}

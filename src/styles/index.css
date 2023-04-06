@@ -1,0 +1,202 @@
+/* ------------------------------header style------------------------------ */
+
+body > header {
+    background-color: var(--grey-darkest);
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0 5%;
+}
+
+body > header > button {
+    background-color: var(--grey-darkest);
+    color: var(--white);
+}
+
+/* re-used component with picture, name and stack of an user*/
+
+.user__profile--small {
+    display: flex;
+    flex-direction: row;
+}
+
+.user__profile--small > img {
+    width: 7vh;
+    height: 7vh;
+    align-self: center;
+}
+
+.user__profile--small > .user__name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.user__name-container > h2 {
+    font: var(--tittle-normal);
+}
+
+.user__name-container > span {
+    font: var(--text-small);
+}
+
+/* --------------------------home style------------------------------ */
+
+#post__container, #suggestion__container{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    gap: 2rem;
+}
+
+#post__container {
+    padding-top: 10vh;
+}
+
+#post__container > button {
+    width: fit-content;
+    align-self: end;
+}
+
+#suggestion__container > h3{
+    font: var(--tittle-normal);
+    align-self: center;
+}
+
+#suggestion__users-container{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 1.5rem;
+}
+
+ #suggestion__users-container > .suggestion__users-card{
+    min-width: 218px;
+    padding-bottom: 5%;
+}
+
+.suggestion__users-card > button {
+    margin-top: 0.8rem;
+}
+    
+/* ------------------------------ published elements style ------------------------------*/
+
+#published__container{
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    padding: 0 5%;
+}
+
+#published__container > h1 {
+    font: var(--tittle-large);
+    margin-bottom: 2.5rem;
+}
+
+.published__post-card {
+    margin-bottom: 11%;
+}
+
+.published__post-card > h1 {
+    font: var(--tittle-large);
+    margin: 1.3rem 0;
+}
+
+.published__post-card > p {
+    font: var(--text-medium);
+    margin-bottom: 1.6rem;
+}
+
+.published__footer__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.published__footer__container > button{
+    margin-right: 1.8rem;
+}
+
+.published__footer__container > img {
+    margin-right: 0.6rem;
+}
+
+/* ------------------------------ modal style ------------------------------*/
+.modal__controller{
+    max-width: 84%;
+    border-radius: 0.5rem;
+    border-color: var(--white);
+    bottom: 16vh;
+}
+
+.modal__controller::backdrop{
+    background: rgba(33,37,41, 0.5);
+}
+
+.modal__container{
+    position: relative;
+}
+
+.modal__container > header{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__container > header > button{
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal__container > p, .modal__container > article {
+    padding: 5%;
+    font: var(--text-medium);
+}
+
+/* ------------------------------  media queries ------------------------------*/
+
+@media (min-width: 760px){
+    #home__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #post__container{
+        min-width: 60%;
+    }
+    #suggestion__container{
+        padding-top: 10vh;
+        min-width: 35%;
+    }
+    #suggestion__users-container{
+        flex-direction: column;
+        overflow-x: auto;
+    }
+    .suggestion__users-card{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .suggestion__users-card > button{
+        margin-top: 0;
+        height: fit-content;
+        align-self: center;
+    }
+    #published__container{
+        max-width: 60%;
+    }
+    .modal__controller{
+        max-width: 44rem;
+        bottom: 50vh;
+    }
+}

@@ -1,0 +1,67 @@
+
+.button--default, .button--black {
+    font: var(--text-medium);
+    border-radius: var(--button-radius);
+    padding: 0.625rem 0.75rem;
+    cursor: pointer;
+}
+
+.button--default {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.button--default:hover {
+    background-color: var(--secondary-color);
+    transition: 0.4s;
+}
+
+.button--disabled, .button--disabled:hover {
+    color: var(--grey-dark);
+    background-color: var(--grey-light);
+    cursor: default;
+}
+
+.button--black{
+    color: var(--white);
+    background-color: var(--grey-darkest);
+}
+
+.button--black:hover {
+    background-color: var(--black);
+}
+
+.button--grey {
+    background-color: var(--grey-lightest);
+    color: var(--grey-basic);
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button--white,  .button--white--active{
+    border: 0.125rem solid var(--black);
+    padding: 0.35rem 0.75rem;
+    color: var(--black);
+    background-color: var(--white);
+    font: var(--text-medium);
+    cursor: pointer;
+}
+
+.button--white:hover{
+    background-color: #EDF2FF;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: 0.4s;
+}
+
+.button--white--active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+.button--heart:hover, .heart--clicked{
+    content: url("../assets/img/heart-red.svg");
+    cursor: pointer;
+}

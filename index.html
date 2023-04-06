@@ -7,6 +7,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
     <link rel="stylesheet" href="./src/styles/index.css" />
 
     <!-- FONTE -->
@@ -17,7 +19,53 @@
       rel="stylesheet"
     />
 
+    <script type="module" src="./src/scripts/index.js" defer></script>
+
     <title>Criando rede social</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="./src/assets/img/logo.svg" alt="TechPosters logo">
+      <button>Sair</button>
+    </header>
+    <main>
+      <section id="home__container">
+        <form id="post__container">
+          <header class="user__profile--small">
+            <img src="" alt="user picture">
+            <div class="user__name-container">
+              <h2></h2>
+              <span></span>
+            </div>
+          </header>
+          <input type="text" placeholder="Digitar título do post" required>
+          <textarea id="post__text-content" cols="30" rows="7" placeholder="Digitar descrição do post" required></textarea>
+          <button id="post__button" class="button--default button--disabled">Postar</button>
+        </form>
+        <section id="suggestion__container">
+          <h3>Sugestões para você seguir</h3>
+          <div id="suggestion__users-container">
+          </div>
+        </section>
+      </section>
+      <section id="published__container">
+        <h1>Posts</h1>
+      </section>
+      <dialog class="modal__controller">
+        <div class="modal__container">
+          <header>
+            <div class="user__profile--small">
+              <img src="" alt="user picture">
+              <div class="user__name-container">
+                <h2></h2>
+                <span></span>
+              </div>
+            </div>
+            <button class="button--grey">X</button>
+          </header>
+          <p></p>
+        </div>
+      </dialog>
+    </main>
+  </body>
 </html>
